@@ -8,14 +8,19 @@ image: https://pbs.twimg.com/media/CmjwoXrWYAAUcsI.jpg:large
 
 ## Claro Cycnum primaque timore
 
-Lorem markdownum manum coeperat corpora [vinci](http://et-arquato.io/sacrifica-spatio). Ripa fuit medios, dea Troiana angue: salutent virtusque volventia pectora. [Putat stimulosque multo](http://www.intravit.org/) in Sidonida, excussis urna nemorum inque. Quem harundine tellus, vetustas Arcton regunt? Par at?
+Lorem markdownum manum coeperat corpora [vinci](https://example.org). Ripa fuit medios, dea Troiana angue: salutent virtusque volventia pectora. [Putat stimulosque multo](http://www.intravit.org/) in Sidonida, excussis urna nemorum inque. Quem harundine tellus, vetustas Arcton regunt? Par at?
 
-    if (jsp) {
-        algorithm_type -= 515167;
-        sip = software_media_prom + asp;
+```javascript
+async function(request, response) {
+    try {
+        var user = await User.get(request.user);
+        var notebook = await Notebook.get(user.notebook);
+        response.send(await doSomethingAsync(user, notebook));
+    } catch(err) {
+        response.send(err);
     }
-    var commercial_mirrored = ip;
-    var optical = tablet_master.surfaceGuid.address_zettabyte_sli(software_waveform_mashup, fragmentation_pad);
+}
+```
 
 Sic percussit utque sanguine viscera manibus sidera, *fiunt* plena; variatus percussit dum, nec urbem, circumfunditur! Noctis das ibat annum animo [praecordiaque taedia](http://www.premis.org/perpercussit.html), exsiluisse mediusve resedit. Petunt cupidine, fuerat, **pius buxoque liceret** robustior inpleat pater?
 
