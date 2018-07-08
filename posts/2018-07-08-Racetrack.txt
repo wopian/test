@@ -1,0 +1,15 @@
+---
+title: Racetrack Tutorial
+date: 2018-07-08
+synopsis: A blender tutorial for making racetracks
+author: Yannic Geurts
+image: http://i.imgur.com/aaGyNiy.jpg
+---
+
+## Introduction
+
+Once upon a time, I made a racetrack.
+![](https://i.imgur.com/tsPfTwi.jpg)
+
+
+
