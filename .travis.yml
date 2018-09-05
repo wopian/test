@@ -8,6 +8,5 @@ cache:
 sudo: false
 matrix:
   fast_finish: true
-  allow_failures:
 - node_js: 6
 script: yarn build
