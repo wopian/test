@@ -6,10 +6,10 @@
   "private": true,
   "scripts": {
     "deploy": "now --public",
+    "postdeploy_": "now alias",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
     "lint": "eslint --fix --ext .js,.vue .",
     "precommit": "yarn lint"
   },

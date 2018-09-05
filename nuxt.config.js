@@ -1,9 +1,10 @@
-const { title, description } = require('./meta.config')
+const { title, description, ...meta } = require('./meta.config')
 
 module.exports = {
   env: {
     title,
-    description
+    description,
+    ...meta
   },
   head: {
     title,
@@ -17,9 +18,8 @@ module.exports = {
     ]
   },
   build: {
-    extend (config, ctx) {
-      if (ctx.isClient) {
-        // config.resolve.alias['@'] = join('./', 'components')
+    extend (config, { isClient }) {
+      if (isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

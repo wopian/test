@@ -1,6 +1,8 @@
 <template lang="pug">
   article
-    div(v-for='post in contentPreview')
+    div(v-for='(post, index) in contentPreview')
+
+      p {{ index }}
       pre {{ post }}
 </template>
 
