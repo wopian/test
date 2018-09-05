@@ -4,14 +4,6 @@
   "description": "Nuxt.js Content Site",
   "author": "",
   "private": true,
-  "now": {
-    "name": "yannic.world",
-    "alias": "yannic.world",
-    "type": "npm",
-    "engines": {
-      "node": "^10"
-    }
-  },
   "scripts": {
     "deploy": "now --public",
     "dev": "nuxt",

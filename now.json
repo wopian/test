@@ -1,0 +1,8 @@
+{
+  "name": "yannic.world",
+  "alias": "yannic.world",
+  "type": "npm",
+  "engines": {
+    "node": "^10"
+  }
+}
