@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "now": "now --public",
+    "deploy": "now --public",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
