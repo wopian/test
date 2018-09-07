@@ -1,5 +1,6 @@
 ---
 title: Racetrack Tutorial
+shortTitle:
 synopsis: A blender tutorial for making racetracks
 author: Yannic Geurts
 authorImage: https://pbs.twimg.com/profile_images/479952743088394240/s2KvC_zT_400x400.png

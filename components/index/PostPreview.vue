@@ -5,7 +5,7 @@
       :to='post.permalink'
     )
       img.thumbnail(v-if='!jumbo' v-bind:src='post.image')
-      .title {{ toTitleCase(post.title) }}
+      .title {{ toTitleCase(post.shortTitle || post.title) }}
       p(v-if='post.synopsis') {{ post.synopsis }}
       .author
         img(v-if='post.authorImage' :src='post.authorImage')
