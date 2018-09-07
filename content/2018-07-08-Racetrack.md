@@ -3,13 +3,13 @@ title: Racetrack Tutorial
 shortTitle:
 synopsis: A blender tutorial for making racetracks
 author: Yannic Geurts
-authorImage: https://pbs.twimg.com/profile_images/479952743088394240/s2KvC_zT_400x400.png
-image: https://i.imgur.com/ppsua8E.png
+authorImage: /authors/yannic-geurts.png
+image: /posts/2018-07-08-racetrack/image.png
 ---
 
 ## Introduction
 
-![Once upon a time, I made a racetrack.](https://i.imgur.com/tsPfTwi.jpg)
+![Once upon a time, I made a racetrack.](/posts/2018-07-08-racetrack/tsPfTwi.jpg)
 
 It was made for Blacktop (my work in progress magnum opus), and I entered it into a racetrack contest on /r/Racetrackdesigns.
 The layout sucked (I'm still uncertain what makes a good racetrack), but the presentation was appreciated.
