@@ -2,7 +2,7 @@
   .col.col-12.col-md-6.col-lg-4
     .post(v-bind:class='{ jumbo }')
       img.thumbnail(v-if='!jumbo' v-bind:src='post.image')
-      router-link(v-bind:to='`/${post.permalink}`') {{ toTitleCase(post.title) }}
+      nuxt-link(:to='post.permalink') {{ toTitleCase(post.title) }}
       p(v-if='post.synopsis') {{ post.synopsis }}
       .author
         img(v-if='post.authorImage' :src='post.authorImage')

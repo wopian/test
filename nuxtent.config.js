@@ -1,7 +1,7 @@
 module.exports = {
   content: {
     permalink: ':year/:slug',
-    page: '/_page',
+    page: '/_year/_slug',
     generate: [ // for static build
       'get', 'getAll'
     ],
