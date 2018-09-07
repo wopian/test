@@ -10,6 +10,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "export": "nuxt generate",
     "lint": "eslint --fix --ext .js,.vue .",
     "precommit": "yarn lint"
   },

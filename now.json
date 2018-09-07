@@ -1,7 +1,7 @@
 {
   "name": "yannic.world",
   "alias": "yannic.world",
-  "type": "npm",
+  "type": "static",
   "engines": {
     "node": "^10"
   }
