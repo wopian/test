@@ -1,8 +1,11 @@
 <template lang="pug">
   .col.col-12.col-md-6.col-lg-4
-    .post(v-bind:class='{ jumbo }')
+    nuxt-link.post(
+      v-bind:class='{ jumbo }'
+      :to='post.permalink'
+    )
       img.thumbnail(v-if='!jumbo' v-bind:src='post.image')
-      nuxt-link(:to='post.permalink') {{ toTitleCase(post.title) }}
+      .title {{ toTitleCase(post.title) }}
       p(v-if='post.synopsis') {{ post.synopsis }}
       .author
         img(v-if='post.authorImage' :src='post.authorImage')
@@ -43,10 +46,9 @@
     margin-top: 10vh
     min-width: 100%
 
-  a
+  .title
     font-size: 2rem
     font-weight: 700
-    text-decoration: none
 
   .thumbnail
     width: 100%
@@ -80,12 +82,15 @@
       margin-top: -.5rem
 
   .post
+    display: block
+    text-decoration: none
+    color: $black
     > img
       border-radius: 1px
       height: 14rem
       object-fit: cover
       background: rgba($black, .2)
-    a
+    .title
       color: $black
       font-size: 24px
       letter-spacing: -.02rem
@@ -109,7 +114,7 @@
     @include media-breakpoint-up(sm)
       &
         margin-top: 10vh
-    a
+    .title
       text-align: center
       display: block
       color: $white
