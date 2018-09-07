@@ -47,6 +47,7 @@
   @import '../styles/variables'
 
   input
+    height: 2.375rem
     margin-left: auto
     background: transparent
     border: 1px solid rgba($black, .2)
