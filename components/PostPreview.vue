@@ -35,7 +35,7 @@
         timeAgo,
         toTitleCase
       }
-    },
+    }
   }
 </script>
 

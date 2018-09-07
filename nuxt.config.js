@@ -39,5 +39,8 @@ module.exports = {
   modules: [
     [ 'nuxtent' ]
   ],
+  plugins: [
+    { src: '~plugins/social.js', ssr: true }
+  ],
   loading: { color: '#fe9117' }
 }

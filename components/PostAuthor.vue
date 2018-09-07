@@ -39,7 +39,7 @@
     justify-content: center
     align-items: flex-start
     color: $white
-    margin: 1rem auto 0
+    margin: .5rem auto 0
     img
       width: 2.5rem
       border-radius: 999rem
@@ -61,6 +61,7 @@
       margin-top: -.5rem
     &:not(.jumbo)
       justify-content: flex-start
+      margin: 1rem auto 0
       span
         color: darken($primary, 6)
       time

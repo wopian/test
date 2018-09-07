@@ -19,7 +19,8 @@
     "nuxt": "~1.4.2",
     "nuxtent": "~1.4.1",
     "prismjs": "^1.15.0",
-    "timeago.js": "^3.0.2"
+    "timeago.js": "^3.0.2",
+    "vue-social-sharing": "^2.3.3"
   },
   "devDependencies": {
     "babel-eslint": "~9.0.0",
