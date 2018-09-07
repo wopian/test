@@ -1,10 +1,10 @@
 <template lang="pug">
-  header.navbar.navbar-light.fixed-top(v-bind:class='{ transparent: !hasScrolled }')
+  header.navbar.navbar-light.fixed-top(:class='{ transparent: !hasScrolled }')
     nav.nav.container
-      nuxt-link.navbar-brand.mb-0(v-bind:to='{ name: "index" }')  {{ appTitle }}
+      nuxt-link.navbar-brand.mb-0(:to='{ name: "index" }')  {{ appTitle }}
       .navbar-nav
-        nuxt-link.nav-item.nav-link(v-bind:to='{ name: "about" }') About
-      search(v-bind:hasScrolled='hasScrolled')
+        nuxt-link.nav-item.nav-link(:to='{ name: "about" }') About
+      search(:hasScrolled='hasScrolled')
 </template>
 
 <script>

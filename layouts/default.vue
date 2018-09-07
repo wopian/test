@@ -30,6 +30,7 @@ export default {
     min-height: 100vh
     padding-top: 6rem
     background: darken($white, .5)
-  main
+  main,
+  article
     flex: 3
 </style>

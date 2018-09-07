@@ -1,27 +1,30 @@
 <template lang="pug">
   .col.col-12.col-md-6.col-lg-4
     nuxt-link.post(
-      v-bind:class='{ jumbo }'
+      :class='{ jumbo }'
       :to='post.permalink'
     )
-      img.thumbnail(v-if='!jumbo' v-bind:src='post.image')
+      img.thumbnail(
+        v-if='!jumbo'
+        :src='post.image'
+      )
       .title {{ toTitleCase(post.shortTitle || post.title) }}
       p(v-if='post.synopsis') {{ post.synopsis }}
-      .author
-        img(v-if='post.authorImage' :src='post.authorImage')
-        div
-          span {{ post.author || 'Unknown' }}
-          time(
-            pubdate='pubdate'
-            v-bind:datetime='formatDate(post.date)'
-            v-bind:title='formatDate(post.date)'
-        ) {{ timeAgo(post.date) }}
+      post-author(
+        :author='post.author'
+        :authorImage='post.authorImage'
+        :date='post.date'
+        :jumbo='jumbo')
 </template>
 
 <script>
-  import { formatDate, timeAgo, toTitleCase } from '../../utils'
+  import PostAuthor from './PostAuthor'
+  import { formatDate, timeAgo, toTitleCase } from '../utils'
 
   export default {
+    components: {
+      PostAuthor
+    },
     props: [
       'post',
       'jumbo'
@@ -37,7 +40,7 @@
 </script>
 
 <style lang="sass" scoped>
-  @import '../../styles/variables'
+  @import '../styles/variables'
 
   .col:not(:last-of-type)
     margin-bottom: 1rem
@@ -52,34 +55,6 @@
 
   .thumbnail
     width: 100%
-
-  .author
-    display: flex
-    flex-direction: row
-    flex-wrap: nowrap
-    justify-content: center
-    align-items: flex-start
-    color: $white
-    margin: 1rem auto 0
-    img
-      width: 2.5rem
-      border-radius: 999rem
-      margin-right: .5rem
-    div
-      display: inline-block
-      width: auto
-      height: 2.5rem
-      display: flex
-      flex-direction: column
-      justify-content: center
-    span
-      display: block
-      color: $white
-    time
-      display: block
-      font-size: .75rem
-      color: rgba($white, .5)
-      margin-top: -.5rem
 
   .post
     display: block
@@ -99,13 +74,6 @@
       margin-bottom: .25rem
     p
       margin-bottom: .5rem
-    &:not(.jumbo)
-      .author
-        justify-content: flex-start
-      span
-        color: darken($primary, 6)
-      time
-        color: rgba($black, .5)
 
   .jumbo
     height: calc(70vh - 10rem)

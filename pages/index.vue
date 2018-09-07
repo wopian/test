@@ -1,8 +1,8 @@
 <template lang="pug">
   main
-    jumbo-post-background(
+    jumbo-background(
       v-if='list && filteredList[0]'
-      v-bind:image='filteredList[0].image'
+      :image='filteredList[0].image'
     )
     .container
       .row(v-if='list')
@@ -18,12 +18,12 @@
 
 <script>
 import Fuse from 'fuse.js'
-import JumboPostBackground from '~/components/index/JumboPostBackground'
-import PostPreview from '~/components/index/PostPreview'
+import JumboBackground from '~/components/JumboBackground'
+import PostPreview from '~/components/PostPreview'
 
 export default {
   components: {
-    JumboPostBackground,
+    JumboBackground,
     PostPreview
   },
   asyncData: async ({ app }) => ({

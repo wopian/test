@@ -1,19 +1,24 @@
 <template lang="pug">
-  .cta(v-bind:style='`background-image: url(${image})`')
+  .jumbo-background(
+    :style='`background-image: url(${image})`'
+    :class='{ isPost }'
+  )
+    slot
 </template>
 
 <script>
 export default {
   props: [
-    'image'
+    'image',
+    'isPost'
   ]
 }
 </script>
 
 <style lang="sass" scoped>
-  @import '../../styles/variables'
+  @import '../styles/variables'
 
-  .cta
+  .jumbo-background
     position: absolute
     top: 0
     left: 0
@@ -31,5 +36,9 @@ export default {
       right: 0
       bottom: 0
       background: rgba($black, .5)
-      z-index: 0
+      z-index: -1
+    &.isPost
+      height: 30vh
+      background-position: 50% 26%;
+      clip-path: polygon(0 0, 100% 0, 100% 26vh, 50% 100%, 0 26vh)
 </style>

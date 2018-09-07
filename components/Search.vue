@@ -2,7 +2,7 @@
   input(
     placeholder='Search…'
     ref='search'
-    v-bind:class='{ transparent: !hasScrolled }'
+    :class='{ transparent: !hasScrolled }'
     v-show='isIndexPage'
     v-model='keyword'
     @click='selectSearchText'
