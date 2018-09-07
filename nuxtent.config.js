@@ -6,9 +6,5 @@ module.exports = {
       'get', 'getAll'
     ],
     isPost: true
-  },
-  api: {
-    baseURL: '',
-    browserBaseURL: ''
   }
 }
