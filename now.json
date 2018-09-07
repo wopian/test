@@ -4,5 +4,8 @@
   "type": "npm",
   "engines": {
     "node": "^10"
+  },
+  "env": {
+    "NODE_ENV": "production"
   }
 }
