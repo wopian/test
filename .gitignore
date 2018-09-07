@@ -7,10 +7,6 @@ npm-debug.log
 # Nuxt build
 .nuxt
 
-# Nuxt generate
-public
-
-
 # Logs
 logs
 *.log
