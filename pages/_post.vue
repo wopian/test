@@ -5,13 +5,14 @@
       :image='post.image'
       :isPost='true'
     )
-      h1 {{ toTitleCase(post.title) }}
-      post-author(
-        :author='post.author'
-        :authorImage='post.authorImage'
-        :date='post.date'
-        :jumbo='true'
-      )
+      .container
+        h1 {{ toTitleCase(post.title) }}
+        post-author(
+          :author='post.author'
+          :authorImage='post.authorImage'
+          :date='post.date'
+          :jumbo='true'
+        )
     article.container
       nuxtent-body(:body='post.body')
       social-sharing(
@@ -64,16 +65,18 @@
 
   h1
     color: $white
+    line-height: 1.1
     font-size: 2rem
     position: relative
     text-align: center
-    margin-top: 6rem
-    @include media-breakpoint-up(sm)
-      &
-        font-size: 3rem
+    margin: 6rem auto 0 auto
     @include media-breakpoint-up(lg)
       &
-        font-size: 4rem
+        font-size: 2.5rem
+    @include media-breakpoint-up(xl)
+      &
+        font-size: 3rem
+
 
   article
     margin-top: calc(30vh + 2rem)
