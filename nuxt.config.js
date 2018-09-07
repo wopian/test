@@ -36,11 +36,8 @@ module.exports = {
       }
     }
   },
-  generate: {
-    dir: 'public'
-  },
   modules: [
     [ 'nuxtent' ]
   ],
-  loading: { color: '#3B8070' }
+  loading: { color: '#fe9117' }
 }
