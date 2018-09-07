@@ -1,0 +1,129 @@
+<template lang="pug">
+  .col.col-12.col-md-6.col-lg-4
+    .post(v-bind:class='{ jumbo }')
+      img.thumbnail(v-if='!jumbo' v-bind:src='post.image')
+      router-link(v-bind:to='`/${post.permalink}`') {{ toTitleCase(post.title) }}
+      p(v-if='post.synopsis') {{ post.synopsis }}
+      .author
+        img(v-if='post.authorImage' :src='post.authorImage')
+        div
+          span {{ post.author || 'Unknown' }}
+          time(
+            pubdate='pubdate'
+            v-bind:datetime='formatDate(post.date)'
+            v-bind:title='formatDate(post.date)'
+        ) {{ timeAgo(post.date) }}
+</template>
+
+<script>
+  import { formatDate, timeAgo, toTitleCase } from '../../utils'
+
+  export default {
+    props: [
+      'post',
+      'jumbo'
+    ],
+    data () {
+      return {
+        formatDate,
+        timeAgo,
+        toTitleCase
+      }
+    },
+  }
+</script>
+
+<style lang="sass" scoped>
+  @import '../../styles/variables'
+
+  .col:not(:last-of-type)
+    margin-bottom: 1rem
+
+  .col:first-of-type
+    margin-top: 10vh
+    min-width: 100%
+
+  a
+    font-size: 2rem
+    font-weight: 700
+    text-decoration: none
+
+  .thumbnail
+    width: 100%
+
+  .author
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: flex-start
+    color: $white
+    margin: 1rem auto 0
+    img
+      width: 2.5rem
+      border-radius: 999rem
+      margin-right: .5rem
+    div
+      display: inline-block
+      width: auto
+      height: 2.5rem
+      display: flex
+      flex-direction: column
+      justify-content: center
+    span
+      display: block
+      color: $white
+    time
+      display: block
+      font-size: .75rem
+      color: rgba($white, .5)
+      margin-top: -.5rem
+
+  .post
+    > img
+      border-radius: 1px
+      height: 14rem
+      object-fit: cover
+      background: rgba($black, .2)
+    a
+      color: $black
+      font-size: 24px
+      letter-spacing: -.02rem
+      display: block
+      margin-top: .75rem
+      margin-bottom: .25rem
+    p
+      margin-bottom: .5rem
+    &:not(.jumbo)
+      .author
+        justify-content: flex-start
+      span
+        color: darken($primary, 6)
+      time
+        color: rgba($black, .5)
+
+  .jumbo
+    height: calc(70vh - 10rem)
+    min-width: 100%
+    margin-top: 7.5vh
+    @include media-breakpoint-up(sm)
+      &
+        margin-top: 10vh
+    a
+      text-align: center
+      display: block
+      color: $white
+      font-size: 2rem
+      @include media-breakpoint-up(sm)
+        &
+          font-size: 3rem
+      @include media-breakpoint-up(lg)
+        &
+          font-size: 4rem
+    p
+      color: $white
+      width: 75%
+      text-align: center
+      margin: 0 auto
+      font-size: 1.05rem
+</style>

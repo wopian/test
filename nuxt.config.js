@@ -1,4 +1,6 @@
+const { join } = require('path')
 const { title, description, ...meta } = require('./meta.config')
+const resolve = dir => join(__dirname, '..', dir)
 
 module.exports = {
   env: {
@@ -18,7 +20,12 @@ module.exports = {
     ]
   },
   build: {
-    extend (config, { isClient }) {
+    extend (config, { isClient, isServer }) {
+      if (isServer) {
+        config.resolve.alias['component'] = resolve('components')
+        config.resolve.alias['style'] = resolve('styles')
+      }
+
       if (isClient) {
         config.module.rules.push({
           enforce: 'pre',

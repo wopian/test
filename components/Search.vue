@@ -14,7 +14,7 @@
   export default {
     data () {
       return {
-        keyword: ''
+        keyword: this.$route.query.keyword || ''
       }
     },
     props: [
@@ -43,8 +43,8 @@
   }
 </script>
 
-<style lang="stylus" scoped>
-  @import '../styles/config'
+<style lang="sass" scoped>
+  @import '../styles/variables'
 
   input
     margin-left: auto
@@ -66,7 +66,7 @@
     @include media-breakpoint-down(xs)
       &
         width: 100%
-  
+
   .transparent
     border: 1px solid rgba($white, .2)
     color: $white
@@ -76,8 +76,8 @@
       border: 1px solid rgba($white, .2)
 </style>
 
-<style lang="stylus">
-  @import '../styles/config'
+<style lang="sass">
+  @import '../styles/variables'
 
   header.transparent:hover
     .transparent

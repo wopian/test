@@ -33,8 +33,8 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-  @import '../styles/config'
+<style lang="sass" scoped>
+  @import '../styles/variables'
 
   header
     background: rgba($white, .95)
