@@ -8,7 +8,7 @@
 [![david dev badge]][david dev]
 [![donate badge]][donate]
 
-> Blog for [yannic.world]
+> Blog for [yannic.world][web]
 
 ## Usage
 
