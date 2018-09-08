@@ -1,0 +1,11 @@
+os:
+- linux
+language: node_js
+node_js:
+- node
+cache:
+  yarn: true
+sudo: false
+matrix:
+  fast_finish: true
+script: yarn build
