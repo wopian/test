@@ -36,14 +36,14 @@ To view your blog post as you're writing it, you can:
    synopsis: # Shown on index and when embedded on other sites
    author: Yannic Geurts
    authorImage: /authors/yannic-geurts.png # Or a HTTPS image link
-   image: /posts/{yyyy}/{mm-dd-slug}/image.jpg # Or a HTTPS image link
+   image: /{yyyy}/{slug}/image.jpg # Or a HTTPS image link
    ---
 
    ## Your Blog Post Content...
    ```
 
 1. Edit the [Markdown] file with your blog content after the `---`.
-1. Save images in `/static/posts/{yyyy}/{mm-dd-slug}` or link to HTTPS images.
+1. Save images in `/static/{yyyy}/{slug}` or link to HTTPS images.
 1. Add the new files to Git.
 1. Commit and push files upstream.
 1. Create and merge the Pull Request on GitHub.
