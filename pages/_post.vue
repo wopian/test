@@ -54,7 +54,10 @@
     },
     head () {
       return {
-        title: `${this.post.title} - ${process.env.title}`
+        title: `${this.post.title} - ${process.env.title}`,
+        meta: [
+          { hid: 'description', name: 'description', content: this.post.synopsis || process.env.description }
+        ]
       }
     }
   }
