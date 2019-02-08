@@ -3,6 +3,7 @@ const { title, description, ...meta } = require('./meta.config')
 const resolve = dir => join(__dirname, '..', dir)
 
 module.exports = {
+  mode: 'universal',
   env: {
     title,
     description,
@@ -37,7 +38,7 @@ module.exports = {
     }
   },
   modules: [
-    [ 'nuxtent' ]
+    [ '@dinamomx/nuxtent' ]
   ],
   plugins: [
     { src: '~plugins/social.js', ssr: true }

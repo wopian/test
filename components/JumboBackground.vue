@@ -14,8 +14,8 @@
         default: ''
       },
       isPost: {
-        type: String,
-        default: ''
+        type: Boolean,
+        default: true
       }
     }
   }
