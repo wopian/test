@@ -14,18 +14,30 @@
   import { formatDate, timeAgo } from '../utils'
 
   export default {
-    props: [
-      'authorImage',
-      'author',
-      'date',
-      'jumbo'
-    ],
+    props: {
+      authorImage: {
+        type: String,
+        default: ''
+      },
+      author: {
+        type: String,
+        default: ''
+      },
+      date: {
+        type: String,
+        default: ''
+      },
+      jumbo: {
+        type: Boolean,
+        default: false
+      }
+    },
     data () {
       return {
         formatDate,
         timeAgo
       }
-    },
+    }
   }
 </script>
 

@@ -80,7 +80,6 @@
       &
         font-size: 3rem
 
-
   article
     margin-top: calc(30vh + 2rem)
 </style>
@@ -129,4 +128,3 @@
       width: 24px
       margin-top: -.15rem
 </style>
-

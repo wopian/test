@@ -7,12 +7,18 @@
 </template>
 
 <script>
-export default {
-  props: [
-    'image',
-    'isPost'
-  ]
-}
+  export default {
+    props: {
+      image: {
+        type: String,
+        default: ''
+      },
+      isPost: {
+        type: String,
+        default: ''
+      }
+    }
+  }
 </script>
 
 <style lang="sass" scoped>

@@ -8,27 +8,27 @@
 </template>
 
 <script>
-import Search from '~/components/Search'
+  import Search from '~/components/Search'
 
-export default {
-  components: {
-    Search
-  },
-  data () {
-    return {
-      appTitle: process.env.appTitle,
-      hasScrolled: false
+  export default {
+    components: {
+      Search
+    },
+    data () {
+      return {
+        appTitle: process.env.appTitle,
+        hasScrolled: false
+      }
+    },
+    created () {
+      if (process.browser) window.addEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+      handleScroll () {
+        if (process.browser) this.hasScrolled = window.scrollY > 0
+      }
     }
-  },
-  methods: {
-    handleScroll () {
-      if (process.browser) this.hasScrolled = window.scrollY > 0
-    }
-  },
-  created () {
-    if (process.browser) window.addEventListener('scroll', this.handleScroll)
   }
-}
 </script>
 
 <style lang="sass" scoped>
@@ -46,8 +46,7 @@ export default {
       a
         color: darken($black, 2)
     .navbar-brand,
-    .nav-link,
-    a
+    &.navbar-light a
       color: $white
 
   header
@@ -68,7 +67,8 @@ export default {
         margin: 0
 
   .navbar-nav
-    flex: 1
+    align-items: self-start
+    flex: 1 0
 
   .navbar-brand
     padding-left: 15px

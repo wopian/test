@@ -25,10 +25,16 @@
     components: {
       PostAuthor
     },
-    props: [
-      'post',
-      'jumbo'
-    ],
+    props: {
+      post: {
+        type: Object,
+        default: () => {}
+      },
+      jumbo: {
+        type: Boolean,
+        default: false
+      }
+    },
     data () {
       return {
         formatDate,

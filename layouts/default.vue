@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import AppFooter from '~/components/AppFooter'
-import AppHeader from '~/components/AppHeader'
+  import AppFooter from '~/components/AppFooter'
+  import AppHeader from '~/components/AppHeader'
 
-export default {
-  components: {
-    AppFooter,
-    AppHeader
+  export default {
+    components: {
+      AppFooter,
+      AppHeader
+    }
   }
-}
 </script>
 
 <style lang="sass">

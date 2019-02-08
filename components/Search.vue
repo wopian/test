@@ -12,17 +12,26 @@
 
 <script>
   export default {
+    props: {
+      hasScrolled: {
+        type: Boolean,
+        default: false
+      }
+    },
     data () {
       return {
         keyword: this.$route.query.keyword || ''
       }
     },
-    props: [
-      'hasScrolled'
-    ],
     computed: {
       isIndexPage () {
         return this.$nuxt.$route.name === 'index'
+      }
+    },
+    watch: {
+      'keyword' () {
+        if (this.keyword) this.$router.push({ name: 'index', query: { keyword: this.keyword } })
+        else this.$router.push({ name: 'index' })
       }
     },
     methods: {
@@ -32,12 +41,6 @@
       },
       selectSearchText () {
         this.$refs.search.select()
-      }
-    },
-    watch: {
-      'keyword' () {
-        if (this.keyword) this.$router.push({ name: 'index', query: { keyword: this.keyword } })
-        else this.$router.push({ name: 'index' })
       }
     }
   }

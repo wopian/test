@@ -9,5 +9,16 @@ module.exports = {
   },
   extends: [
     "wopian-vue"
+  ],
+  rules: {
+    "vue/script-indent": ["error", 2, { "baseIndent": 1 }]
+  },
+  overrides: [
+    {
+      files: ["*.vue"],
+      rules: {
+        indent: "off"
+      }
+    }
   ]
 }
