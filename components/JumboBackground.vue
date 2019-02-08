@@ -8,16 +8,10 @@
 
 <script>
   export default {
-    props: {
-      image: {
-        type: String,
-        default: ''
-      },
-      isPost: {
-        type: Boolean,
-        default: true
-      }
-    }
+    props: [
+      'image',
+      'isPost'
+    ]
   }
 </script>
 

@@ -14,24 +14,12 @@
   import { formatDate, timeAgo } from '../utils'
 
   export default {
-    props: {
-      authorImage: {
-        type: String,
-        default: ''
-      },
-      author: {
-        type: String,
-        default: ''
-      },
-      date: {
-        type: String,
-        default: ''
-      },
-      jumbo: {
-        type: Boolean,
-        default: false
-      }
-    },
+    props: [
+      'authorImage',
+      'author',
+      'date',
+      'jumbo'
+    ],
     data () {
       return {
         formatDate,
