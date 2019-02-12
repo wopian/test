@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "~4.5.2",
-    "bootstrap": "~4.2.0",
+    "bootstrap": "~4.3.0",
     "fuse.js": "~3.4.0",
     "nuxt": "~2.4.3",
     "@dinamomx/nuxtent": "~3.0.1",
