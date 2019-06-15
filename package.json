@@ -18,7 +18,7 @@
     "bootstrap": "~4.3.0",
     "fuse.js": "~3.4.0",
     "nuxt": "~2.4.3",
-    "@dinamomx/nuxtent": "~3.0.1",
+    "@dinamomx/nuxtent": "~3.1.0",
     "prismjs": "~1.16.0",
     "timeago.js": "~3.0.2",
     "vue-social-sharing": "~2.4.0"
